@@ -1,11 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class bins : MonoBehaviour
 {
 
     public ParticleSystem particles;
+    public int goodsorted;
+    public int badsorted;
+    public int levelgoal = 10;
+    public GameObject completed;
 
     
     // Start is called before the first frame update
@@ -19,6 +25,14 @@ public class bins : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if(goodsorted >= levelgoal)
+        {
+            Time.timeScale =0f;
+            completed.SetActive(true);
+            
+
+        }
         
     }
 
@@ -26,6 +40,17 @@ public class bins : MonoBehaviour
     {
        if(other.gameObject.tag == this.gameObject.tag)
        {
+
+        if(other.gameObject.tag == "good")
+        {
+            goodsorted+=1;
+        }
+        if(other.gameObject.tag == "bad")
+        {
+            badsorted+=1;
+        }
+
+
         particles.Play();
         Destroy(other.gameObject);
         PlayerPrefs.SetInt("score",PlayerPrefs.GetInt("score")+10); 

@@ -12,6 +12,10 @@ public class spawner : MonoBehaviour
     public float spawnInterval = 2f; // Interval between spawning prefabs, in seconds
     private float elapsedTime = 0f; // Time elapsed since the last spawn
 
+    public int spawncount; // Number of game objects to spawn
+
+    public int levelcap;
+
 
     // Start is called before the first frame update
     void Start()
@@ -33,10 +37,16 @@ public class spawner : MonoBehaviour
 
             // Spawn the prefab at the spawn point
             Instantiate(prefab, spawnPoint.position, spawnPoint.rotation);
+            spawncount+=1;
 
             // Reset elapsed time
             elapsedTime = 0f;
 
+        }
+
+        if(spawncount >= levelcap)
+        {
+            this.gameObject.SetActive(false);
         }
         
         
