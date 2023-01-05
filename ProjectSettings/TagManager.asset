@@ -8,6 +8,7 @@ TagManager:
   - good
   - bad
   - danger
+  - lock
   layers:
   - Default
   - TransparentFX

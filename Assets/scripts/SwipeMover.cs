@@ -27,13 +27,26 @@ public class SwipeMover : MonoBehaviour
     public int misscount=0;
 
     public Text Score;
+    public Text Coins;
 
 
     public Animator playeranimator;
+    public  GameObject[] player; 
+    
 
     //public Image milestoneimage;
 
     
+
+    void Start()
+    {
+        //////////////////////////////// activate the skin and select the animator GetComponent //////////////////////////////////
+
+
+        player[PlayerPrefs.GetInt("PlayerSkin")].SetActive(true);
+        playeranimator = player[PlayerPrefs.GetInt("PlayerSkin")].GetComponent<Animator>();
+        //playeranimator = player[1].GetComponent<Animator>();
+    }
 
     void Update()
     {
@@ -42,7 +55,8 @@ public class SwipeMover : MonoBehaviour
 
             touchscan();
 
-            Score.GetComponent<Text>().text = PlayerPrefs.GetInt("score").ToString();
+                Score.GetComponent<Text>().text = PlayerPrefs.GetInt("score").ToString();
+                Coins.GetComponent<Text>().text = PlayerPrefs.GetInt("Coins").ToString();
             
 
 
@@ -167,13 +181,13 @@ public class SwipeMover : MonoBehaviour
 
     public IEnumerator ShootLeft(GameObject Gobj)
     {
-        //Gobj.GetComponent<Rigidbody>().AddForce((Vector3.up)*ForceFactor);
-        Gobj.GetComponent<Rigidbody>().AddForce((BadBin.transform.position - transform.position).normalized*ForceFactor,ForceMode.Impulse);
-        
-        //Gobj.GetComponent<Rigidbody>().AddRelativeForce(50,50,ForceFactor);
-        
-        yield return new WaitForSeconds(.2f);
-        swleft=false;
+            //Gobj.GetComponent<Rigidbody>().AddForce((Vector3.up)*ForceFactor);
+            Gobj.GetComponent<Rigidbody>().AddForce((BadBin.transform.position - transform.position).normalized*ForceFactor,ForceMode.Impulse);
+            
+            //Gobj.GetComponent<Rigidbody>().AddRelativeForce(50,50,ForceFactor);
+            
+            yield return new WaitForSeconds(.2f);
+            swleft=false;
         
         
 

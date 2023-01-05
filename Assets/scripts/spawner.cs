@@ -20,8 +20,9 @@ public class spawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-        
+        //levelcap = PlayerPrefs.GetInt("levelspawncount");
+
+
     }
 
     // Update is called once per frame
@@ -29,7 +30,7 @@ public class spawner : MonoBehaviour
     {
         elapsedTime += Time.deltaTime;
 
-        if(elapsedTime >= spawnInterval)
+        if (elapsedTime >= spawnInterval)
         {
             // StartCoroutine(Spawn());
             int randomIndex = Random.Range(0, prefabs.Length);
@@ -37,32 +38,19 @@ public class spawner : MonoBehaviour
 
             // Spawn the prefab at the spawn point
             Instantiate(prefab, spawnPoint.position, spawnPoint.rotation);
-            spawncount+=1;
+            spawncount += 1;
 
             // Reset elapsed time
             elapsedTime = 0f;
 
         }
 
-        if(spawncount >= levelcap)
+        if (spawncount >= levelcap)
         {
             this.gameObject.SetActive(false);
         }
-        
-        
+
+
     }
 
-   
-    // public IEnumerator Spawn()
-    // {
-       
-    //     randomIndex = Random.Range(0, prefabs.Length);
-    //     yield return new WaitForSeconds(2f);
-    //     GameObject prefab = prefabs[randomIndex];
-
-    //     // Spawn the prefab at the spawn point
-    //     Instantiate(prefab, spawnPoint.position, spawnPoint.rotation);
-    //     elapsedTime = 0f;
-    //     yield break; //
-    // }
 }
