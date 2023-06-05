@@ -30,8 +30,8 @@ public class SwipeMover : MonoBehaviour
     public Text Coins;
 
 
-    public Animator playeranimator;
-    public  GameObject[] player; 
+    //public Animator playeranimator;
+    //public  GameObject[] player; 
     
 
     //public Image milestoneimage;
@@ -43,8 +43,8 @@ public class SwipeMover : MonoBehaviour
         //////////////////////////////// activate the skin and select the animator GetComponent //////////////////////////////////
 
 
-        player[PlayerPrefs.GetInt("PlayerSkin")].SetActive(true);
-        playeranimator = player[PlayerPrefs.GetInt("PlayerSkin")].GetComponent<Animator>();
+        //player[PlayerPrefs.GetInt("PlayerSkin")].SetActive(true);
+        //playeranimator = player[PlayerPrefs.GetInt("PlayerSkin")].GetComponent<Animator>();
         //playeranimator = player[1].GetComponent<Animator>();
     }
 
@@ -112,7 +112,7 @@ public class SwipeMover : MonoBehaviour
                     if(InPos)
                     {
                     swright = true;
-                    playeranimator.SetTrigger("rswipe");
+                    //playeranimator.SetTrigger("rswipe");
                     }
                     
                     // Swipe was to the right, move the object towards the touch position
@@ -124,7 +124,7 @@ public class SwipeMover : MonoBehaviour
                     if(InPos)
                     {
                     swleft = true;
-                    playeranimator.SetTrigger("lswipe");
+                    //playeranimator.SetTrigger("lswipe");
                     }
                     // Swipe was to the left, move the object away from the touch position
                     //col.gameObject.transform.position = Vector3.MoveTowards(transform.position, 2 * transform.position - touchWorldPos, moveSpeed * Time.deltaTime);
