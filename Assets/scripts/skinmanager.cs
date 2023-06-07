@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class skinmanager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class skinmanager : MonoBehaviour
         PlayerPrefs.SetInt("Coins", 100);
         PlayerPrefs.SetInt("skin1status", 0);
         PlayerPrefs.SetInt("skin2status", 0);
+        
     }
     // Start is called before the first frame update
     void Start()

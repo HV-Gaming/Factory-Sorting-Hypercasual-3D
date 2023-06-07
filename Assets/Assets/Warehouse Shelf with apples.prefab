@@ -195,6 +195,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1197666307192544977, guid: b1f22d98b35a84443b7ea7a0487e9d4a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9d7f5df4481e7454cab878cf3ab11ec9, type: 2}
+    - target: {fileID: 1219800487327896445, guid: b1f22d98b35a84443b7ea7a0487e9d4a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ebb2e18b8090ff84f87569123164f263, type: 2}
     - target: {fileID: 5693188618102843100, guid: b1f22d98b35a84443b7ea7a0487e9d4a,
         type: 3}
       propertyPath: m_Name
@@ -285,6 +295,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1197666307192544977, guid: b1f22d98b35a84443b7ea7a0487e9d4a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9d7f5df4481e7454cab878cf3ab11ec9, type: 2}
+    - target: {fileID: 2378075093716776067, guid: b1f22d98b35a84443b7ea7a0487e9d4a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9d7f5df4481e7454cab878cf3ab11ec9, type: 2}
     - target: {fileID: 5693188618102843100, guid: b1f22d98b35a84443b7ea7a0487e9d4a,
         type: 3}
       propertyPath: m_Name
@@ -375,11 +395,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1197666307192544977, guid: b1f22d98b35a84443b7ea7a0487e9d4a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9d7f5df4481e7454cab878cf3ab11ec9, type: 2}
     - target: {fileID: 5693188618102843100, guid: b1f22d98b35a84443b7ea7a0487e9d4a,
         type: 3}
       propertyPath: m_Name
       value: Apple Stack
       objectReference: {fileID: 0}
+    - target: {fileID: 8086714616044053726, guid: b1f22d98b35a84443b7ea7a0487e9d4a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9d7f5df4481e7454cab878cf3ab11ec9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1f22d98b35a84443b7ea7a0487e9d4a, type: 3}
 --- !u!4 &9057494031435002903 stripped
