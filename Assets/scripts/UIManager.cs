@@ -35,11 +35,30 @@ public class UIManager : MonoBehaviour
     public void restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1f;
         
     }
     public void mainmenu()
     {
         SceneManager.LoadScene("MainMenu"); 
         
+    }
+    public void quit()
+    {
+        Application.Quit();
+    }
+
+    public void Level1()
+    {
+        SceneManager.LoadScene("Level1");
+    }
+
+    public void Level2()
+    {
+        SceneManager.LoadScene("Level2");
+    }
+    public void Level3()
+    {
+        SceneManager.LoadScene("Level3");
     }
 }
