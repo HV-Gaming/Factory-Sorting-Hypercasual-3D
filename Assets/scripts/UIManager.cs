@@ -50,7 +50,7 @@ public class UIManager : MonoBehaviour
 
     public void Level1()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Experimental");
     }
 
     public void Level2()
@@ -60,5 +60,10 @@ public class UIManager : MonoBehaviour
     public void Level3()
     {
         SceneManager.LoadScene("Level3");
+    }
+
+    public void levelselect()
+    {
+        SceneManager.LoadScene("LevelSelect");
     }
 }
