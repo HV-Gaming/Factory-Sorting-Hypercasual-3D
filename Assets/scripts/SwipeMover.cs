@@ -40,12 +40,7 @@ public class SwipeMover : MonoBehaviour
 
     void Start()
     {
-        //////////////////////////////// activate the skin and select the animator GetComponent //////////////////////////////////
-
-
-        //player[PlayerPrefs.GetInt("PlayerSkin")].SetActive(true);
-        //playeranimator = player[PlayerPrefs.GetInt("PlayerSkin")].GetComponent<Animator>();
-        //playeranimator = player[1].GetComponent<Animator>();
+      
     }
 
     void Update()
@@ -60,13 +55,7 @@ public class SwipeMover : MonoBehaviour
             
 
 
-            //test---------------------
-
-            //milestoneimage.fillAmount = (misscount/maxmiss);
-    
-        
-
-        // Check if the screen is being touched
+           
         
 
         
@@ -106,17 +95,15 @@ public class SwipeMover : MonoBehaviour
                 // Check if the swipe was to the left or right
                 if (swipeDistance > 0)
                 {
-                    //touchcontrol.GetComponent<Transform>().transform.LookAt(GoodBin);
-                    //touchcontrol.GetComponent<Rigidbody>().AddRelativeForce(50,50,ForceFactor);
+                  
                     print("swiping right");
                     if(InPos)
                     {
                     swright = true;
-                    //playeranimator.SetTrigger("rswipe");
+                   
                     }
                     
-                    // Swipe was to the right, move the object towards the touch position
-                    //touchcontrol.gameObject.rigidbody.AddForce((GoodBin.transform.position - transform.position).normalized*ForceFactor);
+                    
                 }
                 else
                 {
@@ -124,10 +111,9 @@ public class SwipeMover : MonoBehaviour
                     if(InPos)
                     {
                     swleft = true;
-                    //playeranimator.SetTrigger("lswipe");
+                   
                     }
-                    // Swipe was to the left, move the object away from the touch position
-                    //col.gameObject.transform.position = Vector3.MoveTowards(transform.position, 2 * transform.position - touchWorldPos, moveSpeed * Time.deltaTime);
+                   
                 }
             }
         }
@@ -167,10 +153,10 @@ public class SwipeMover : MonoBehaviour
 
     public IEnumerator ShootRight(GameObject Gobj)
     {
-        //Gobj.GetComponent<Rigidbody>().AddForce((Vector3.up)*ForceFactor);
+        
         Gobj.GetComponent<Rigidbody>().AddForce((GoodBin.transform.position - transform.position).normalized*ForceFactor,ForceMode.Impulse);
         
-        //Gobj.GetComponent<Rigidbody>().AddRelativeForce(50,50,ForceFactor);
+       
         
         yield return new WaitForSeconds(.2f);
         swright=false;
@@ -181,10 +167,10 @@ public class SwipeMover : MonoBehaviour
 
     public IEnumerator ShootLeft(GameObject Gobj)
     {
-            //Gobj.GetComponent<Rigidbody>().AddForce((Vector3.up)*ForceFactor);
+           
             Gobj.GetComponent<Rigidbody>().AddForce((BadBin.transform.position - transform.position).normalized*ForceFactor,ForceMode.Impulse);
             
-            //Gobj.GetComponent<Rigidbody>().AddRelativeForce(50,50,ForceFactor);
+            
             
             yield return new WaitForSeconds(.2f);
             swleft=false;
