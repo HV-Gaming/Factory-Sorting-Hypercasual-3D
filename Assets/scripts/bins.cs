@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class bins : MonoBehaviour
 {
-
+    public Animator playeranimator;
     public ParticleSystem particles;
     public int goodsorted;
     public int badsorted;
@@ -80,6 +80,7 @@ public class bins : MonoBehaviour
             print("right sort");
             SessionCoinsCollected += 1;
             PlayerPrefs.SetInt("Coins", (PlayerPrefs.GetInt("Coins") + 1));
+            playeranimator.SetTrigger("goodsort");
 
 
 
@@ -92,6 +93,7 @@ public class bins : MonoBehaviour
             print("Wrong sort");
             print(PlayerPrefs.GetInt("score"));
             StartCoroutine(flash());
+            playeranimator.SetTrigger("badsort");
 
         }
 
